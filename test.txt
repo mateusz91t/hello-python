@@ -1,1 +1,2 @@
 zmiany po 1 commicie
+trening git stash
