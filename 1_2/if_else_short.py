@@ -1,0 +1,5 @@
+list_1: list = list()
+print('filled' if list_1 else 'empty')
+list_1.append('a')
+print(list_1)
+print('filled' if list_1 else 'empty')

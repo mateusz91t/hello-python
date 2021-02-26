@@ -1,0 +1,5 @@
+<webscript>
+  <shortname name="abc" number="2">Profile Title</shortname>
+  <description>Title component used in the profile page</description>
+  <url>/components/title/profile-title</url>
+</webscript>
