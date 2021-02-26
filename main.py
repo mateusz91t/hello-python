@@ -13,3 +13,4 @@ print(d_1.__contains__('eur'))
 print(d_1)
 d_1['eur'] += -3
 print(d_1)
+print(d_1)
