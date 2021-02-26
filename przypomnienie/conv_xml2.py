@@ -2,7 +2,7 @@ import re
 
 p1 = r'<(\w+?)\ ??((?<=\ )(.*?)(?=\>))*?>(.+?)<\/(\w+?)>'
 # p1 = r'<(\w+)(\ ?\ .*?)?(>)(.+)(</\1>)'
-f1 = open('xml1.xml', 'r+')
+f1 = open('../files_sources/xml1.xml', 'r+')
 t1 = f1.readlines()
 
 print(t1)
