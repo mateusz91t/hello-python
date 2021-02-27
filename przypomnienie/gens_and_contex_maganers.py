@@ -54,7 +54,7 @@ class ContMgr:
         print(f'exit method, exc_type = {exc_type}, exc_val = {exc_val}, exc_tb = {exc_tb}')
 
 
-# with ContMgr('../files_sources/tekst.txt') as resource:
-#     for line in resource:
-#         print(line)
+with ContMgr('../files_sources/test.txt') as resource:
+    for line in resource:
+        print(line)
 
