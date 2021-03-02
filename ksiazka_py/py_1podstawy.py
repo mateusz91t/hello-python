@@ -160,3 +160,57 @@ print(z3.issubset(z4))
 print(z3.issuperset(z4))
 print(z5.issubset(z3))
 print(z3.issuperset(z5))
+
+# functions
+print('\nfunctions')
+
+
+def mul_3(numb):
+    return numb * 3
+
+
+def div_2(numb):
+    return numb / 2
+
+
+def add_2(numb):
+    return numb + 2
+
+
+def change_x(numb=2, *funcs):
+    for f in funcs:
+        numb = f(numb)
+    return numb
+
+
+i1 = change_x(10, mul_3, div_2, add_2)
+print(i1)
+
+add_l = lambda a=5, b=10: a + b
+print(add_l())
+print(add_l(2))
+print(add_l(b=2))
+
+
+def case_chooser(is_uppered: bool = True):
+    def uppered(tekst: str):
+        return tekst.upper()
+
+    def lowered(tekst: str):
+        return tekst.lower()
+
+    if is_uppered:
+        return uppered
+    else:
+        return lowered
+
+
+print(
+    case_chooser(False)('tekst'),
+    case_chooser()('tekst')
+)
+
+upp = case_chooser()
+low = case_chooser(False)
+print(upp('yOyO'))
+print(low('HeLlO'))
