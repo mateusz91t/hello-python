@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf8'?>
+<dane atrybut="jakaś wartość">
+    <nazwisko param2="kolejna wartość przykładowa" enc="utf8">Kowalski po zmianie</nazwisko>
+    <samochod>Renia Clio</samochod><wzrost>176cm</wzrost>
+    <adres>
+        <miasto>Warszawa</miasto>
+        <kod>02-019</kod>
+    <ulica>Bura</ulica></adres>
+    <jezyki>angielski</jezyki>
+    <jezyki>Java</jezyki>
+    <jezyki>R</jezyki>
+    <jezyki>Python</jezyki>
+    <jezyki>PL/SQL</jezyki>
+<masa>72.4</masa></dane>

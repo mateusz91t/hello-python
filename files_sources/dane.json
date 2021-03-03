@@ -1,0 +1,16 @@
+{
+    "imie": "Andrzej",
+    "nazwisko": "Klusiewicz",
+    "adres": {
+        "miasto": "Warszawa",
+        "kod": "02-019"
+    },
+    "jezyki": [
+        "polski",
+        "angielski",
+        "Java",
+        "R",
+        "Python",
+        "PL/SQL"
+    ]
+}

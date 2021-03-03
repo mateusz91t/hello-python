@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dane atrybut="jakaś wartość">
+    <imie>Andrzej</imie>
+    <nazwisko param="wartość przykładowa" param2="kolejna wartość
+przykładowa">Klusiewicz</nazwisko>
+    <wzrost>176cm</wzrost>
+    <adres>
+        <miasto>Warszawa</miasto>
+        <kod>02-019</kod>
+    </adres>
+    <jezyki>polski</jezyki>
+    <jezyki>angielski</jezyki>
+    <jezyki>Java</jezyki>
+    <jezyki>R</jezyki>
+    <jezyki>Python</jezyki>
+    <jezyki>PL/SQL</jezyki>
+</dane>

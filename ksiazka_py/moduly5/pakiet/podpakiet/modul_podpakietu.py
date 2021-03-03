@@ -1,0 +1,2 @@
+def witacz():
+    print('hi')
