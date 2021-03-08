@@ -1,0 +1,32 @@
+pytest:
+python -m pytest
+uruchomi wszystkie testy, które są w plikach zaczynających się od test*
+i metodach w tych plikach zaczynających się od test*
+
+python -m pytest -v
+to samo ale wyświeli konkretne testy
+
+python -m pytest -v ksiazka_py/testy19
+uruchomi testy tylko z tego katalogu i podrzędnych
+
+python -m pytest -k daj -v
+uruchomi wszystkie testy mające w nazwie metody 'daj'
+
+python -m pytest -m szczegolowe -W ignore::UserWarning -v
+ukrywa warningi
+
+@pytest.mark.szczegolowe
+dekorator dodany nad metodami testującymi grupuje je do jednej nazwy
+dodanie go powoduje ignorowanie normalnych nazw metod
+
+python -m pytest ksiazka_py/testy15/testy21fixtury -v -s
+-s powoduje wyświetlenie out z konsoli print()
+
+def setup_module(): ... oraz def teardown_module():
+uruchomi się na początku i na końcu pliku testów
+
+@pytest.fixture
+dodanie tego dekoratora nad metodę i wpisanie nazwy dekorowanej metody jako
+parametru w definicji wybranych testów spowoduje uruchomienie tej
+metody przed uruchomieniem każdego z tych testów
+

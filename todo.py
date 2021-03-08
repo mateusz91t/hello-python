@@ -1,4 +1,3 @@
-# todo wykład testy
 # todo książka testy
 # todo skończyć książkę
 
