@@ -6,6 +6,6 @@ def test_podepnij_baze():
     for b in bazy:
         tp2.podepnij_baze(b)
         assert tp2.wykonaj_zapytanie() == 'ok'
-    pass
+    pass  # to zostanie wyświetlone jako część niepokryta kodem
 
 # python -m pytest -k podepnij -v -W ignore::Warning

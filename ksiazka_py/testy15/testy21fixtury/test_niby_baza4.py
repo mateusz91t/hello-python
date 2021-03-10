@@ -1,9 +1,10 @@
-import py_21niby_baza as nb
 import pytest
 
+import py_21niby_baza as nb
 
-# to znów powoduje uruchamianie dla każdej funkcji z parametrem nazwy dekorowanej funkcji
-@pytest.fixture
+
+# uruchomi load_stuff() jeden raz przed uruchomieniem testów z nazwą tej f. w definicji parametrów
+@pytest.fixture(scope='module')
 def load_stuff():
     print('\n', '#' * 10, ' load ', '#' * 10)
     nb.load_db()
@@ -11,7 +12,9 @@ def load_stuff():
 
 def test_get_data(load_stuff):
     assert len(nb.get_data()) > 0
+    print('\ntest_get_data')
 
 
 def test_get_one(load_stuff):
     assert nb.get_one(0)[1] == 'Marian'
+    print('\ntest_get_one')

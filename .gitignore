@@ -2,3 +2,5 @@
 venv/
 csv_learn/.vscode/
 .pytest_cache/
+.coverage
+htmlcov/
