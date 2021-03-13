@@ -1,0 +1,5 @@
+[tool.pytest.ini_options]
+markers = [
+    "podstawowe: marks tests as slow (deselect with '-m \"not slow\"')",
+    "szczegolowe",
+]

@@ -18,6 +18,8 @@ ukrywa warningi
 @pytest.mark.szczegolowe
 dekorator dodany nad metodami testującymi grupuje je do jednej nazwy
 dodanie go powoduje ignorowanie normalnych nazw metod
+po takim dodaniu podczas testów będą wyświetlane warningi, aby dodać 'szczegolowe' do przestrzeni mark
+można to zrobić dodając plik pyproject.toml, a w opis nowych marks formacie z dokumentacji
 
 python -m pytest ksiazka_py/testy15/testy21fixtury -v -s
 -s powoduje wyświetlenie out z konsoli print()
