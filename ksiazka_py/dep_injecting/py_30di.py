@@ -13,12 +13,12 @@ def go3(now: Callable[[], datetime], ) -> Tuple[datetime, datetime]:
     return started_at, ended_at
 
 
-print(go3(datetime.now))
+# print(go3(datetime.now))
 
 gen = iter([fake_start, fake_end])
-print(go3(lambda: next(gen)))
+# print(go3(lambda: next(gen)))
 
 gen2 = iter(['ciach chach', 'prach prach'])
-print((go3(lambda: next(gen2))))
+# print((go3(lambda: next(gen2))))
 
 

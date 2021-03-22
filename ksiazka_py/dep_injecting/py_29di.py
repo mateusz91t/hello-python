@@ -36,7 +36,10 @@ fake_end = datetime(2020, 1, 1, 18, 3, 15)
 #     print(go2())
 
 
-def go3(now: Callable[[], datetime], ) -> Tuple[datetime, datetime]:
+print('go3')
+
+
+def go3(now: Callable[[], datetime]) -> Tuple[datetime, datetime]:
     started_at = now()
     for x in range(2 ** 22):
         y = x + x
@@ -47,5 +50,4 @@ def go3(now: Callable[[], datetime], ) -> Tuple[datetime, datetime]:
 print(go3(datetime.now))
 
 gen = iter([fake_start, fake_end])
-
 print(go3(lambda: next(gen)))
