@@ -4,7 +4,4 @@ csv_learn/.vscode/
 .pytest_cache/
 .coverage
 htmlcov/
-ksiazka_py/click/__pycache__/
-ksiazka_py/pars_bea_soup/__pycache__/
-z0_lvl_up/__pycache__/
-ksiazka_py/dep_injecting/__pycache__
+__pycache__/

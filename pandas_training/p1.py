@@ -13,12 +13,17 @@ df = pd.DataFrame(
     }
 )
 
+print(type(df))
 print(df, '\n')
+print(type(df['Age']))
 print(df['Age'], '\n')
 
 ages = pd.Series([22, 35, 58], name='Age')
+print(type(ages))
 print(ages)
 print(df['Age'].min())
 print(ages.sum() / ages.count())
-print(ages.std)
+
+print()
+print(ages.std())
 print(df.describe())

@@ -2,7 +2,7 @@ import psycopg2
 
 # połączenie i select
 polaczenie = psycopg2.connect(
-    host='localhost', database='postgres', user='postgres', password=''
+    host='localhost', database='postgres', user='postgres', password='waga'
 )
 print('polaczenie', polaczenie)
 print(type(polaczenie))

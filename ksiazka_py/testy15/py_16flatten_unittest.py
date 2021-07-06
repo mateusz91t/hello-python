@@ -1,6 +1,7 @@
 import unittest
 from ksiazka_py.testy15.py_15flatten import flatten
 
+
 class TestsFlatten(unittest.TestCase):
     def test_flatten_not_nested_list(self):
         test_list = [1, 2, 3]
