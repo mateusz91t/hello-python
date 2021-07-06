@@ -1,3 +1,6 @@
+jeśli tworzymy osobny folder z plikami to trzeba zrobić z niego pakiet.
+Pakiet tworzymy dodając w folerze pusty plik __init__.py
+
 pytest:
 python -m pytest
 uruchomi wszystkie testy, które są w plikach zaczynających się od test*
@@ -30,8 +33,7 @@ uruchomi się na początku i na końcu pliku testów
 fixtura - metoda, która przygotowuje dane lub wykonuje czynności inicjalizacyjne na potrzeby testów
 
 @pytest.fixture
-dodanie tego dekoratora nad naszą customową metodę i wpisanie nazwy dekorowanej metody jako
-parametru w definicji wybranych testów spowoduje uruchomienie tej
+dodanie tego dekoratora nad naszą customową metodę i wpisanie nazwy dekorowanej metody jako parametru w definicji wybranych testów spowoduje uruchomienie tej
 metody przed uruchomieniem każdego z tych testów
 
 @pytest.fixture(scope='module')
@@ -39,8 +41,7 @@ dekorator nad naszą customową metodą spowoduje uruchomienie tej f.
 jeden raz przed uruchomieniem testów z nazwą tej f. w definicji parametrów
 
 @pytest.fixture(autouse=True)
-# autouse zadziała tak tak setup_module - nie trzeba podawać nazwy funkcji w parametrach testów
-można mieszać ze scope='module', w tedy uruchomi się 1 raz dla całego modułu
+# autouse zadziała tak tak setup_module - nie trzeba podawać nazwy funkcji w parametrach testów można mieszać ze scope='module', w tedy uruchomi się 1 raz dla całego modułu
 
 python -m pytest --cov
 sprawdzi cały projekt pod względem pokrycia kodu testami
@@ -50,3 +51,6 @@ pominie inne biblioteki i sprawdzi pokrycie tylko mojego kodu
 
 python -m pytest ksiazka_py/testy15/testy20param/ --cov --cov-report=html
 sprawdzić tylko wskazany folder, a wynik wrzuci to katalogu projektu do folderu htmlcov
+
+pytest -W ignore::DeprecationWarning -s
+pozwala wyświetlać printy podczas testów

@@ -76,7 +76,7 @@ l3.reverse()
 print(l3)
 
 l3 = ['ogórek', 'pomidor', 'marchew', 'ziemniak']
-l3.sort(reverse=True)
+l3.sort(reverse=True, )
 print(l3)
 
 l4 = [[1, 'reno'], [4, 'cintronex'], [2, 'audi'], [3, 'zaporożec']]

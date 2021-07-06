@@ -5,9 +5,9 @@ def ele():
     yield 'ele 4'
 
 
+print(*ele())
 for e in ele():
     print(e)
-print(*ele())
 
 
 def mojzakres(numb):
