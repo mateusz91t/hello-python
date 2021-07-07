@@ -1,7 +1,7 @@
 import time
 
 
-# it can't be Ctrl+C stooped
+# it can't be Ctrl+C stopped
 # while True:
 #     try:
 #         print('Weeee! You cannot stop me')
@@ -18,4 +18,3 @@ while True:
         time.sleep(.5)
     except Exception:
         print('Oww... Whatever imma keep running')
-

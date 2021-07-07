@@ -12,7 +12,7 @@ py_avg = timeit.timeit(
     number=100000
 )
 
-print(f"{db_avg = }\n{py_avg = }")
+print(f"db_avg = {db_avg}\npy_avg = {py_avg}")
 print(f"db_avg - db_avg = {abs(db_avg - py_avg)}")
 
 
@@ -32,9 +32,16 @@ print(f"list = {lt}")
 print(f"tuple = {tt}")
 
 
-# output:
-# db_avg = 6.0632881
-# py_avg = 12.784954099999998
-# db_avg - db_avg = 6.721665999999998
-# list = 11.344587
-# tuple = 11.275824500000006
+# output in CPython:
+# db_avg = 17.7117786
+# py_avg = 22.7901368
+# db_avg - db_avg = 5.0783582
+# list = 11.382604700000002
+# tuple = 11.870016
+
+# output in PyPy:
+# db_avg = 17.4833119
+# py_avg = 20.7942641
+# db_avg - db_avg = 3.310952199999999
+# list = 1.8074535999999952    !!!
+# tuple = 2.548409499999998    !!!

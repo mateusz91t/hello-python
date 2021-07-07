@@ -10,7 +10,6 @@ l1 = [chr(i) for i in range(97, 108)]
 l1
 
 # deleting a slice from list
-print(l1)
 l1
 
 l1[3:8]
@@ -72,7 +71,8 @@ for _ in range(2):
 elapsed = datetime.now() - start
 print('czek():\t' + str(elapsed))
 
-#
+
+# pandas
 import os
 
 cur_dir = os.getcwd()
@@ -95,6 +95,7 @@ df.size
 df.shape[0] * df.shape[1]
 
 
+# generators
 def get_row_by_row(df: pd.DataFrame):
     for i in range(len(df)):
         yield df.iloc[i]
@@ -184,10 +185,9 @@ f.__dict__
 
 f.locales
 f.seed_locale('en_US')
-f.factories.insert(2,2)
+f.factories.insert(2, 2)
 f.factories.pop()
 f.random.randrange(20)
-
 
 # plots
 # common linear plots
@@ -210,5 +210,45 @@ df.columns[1:]
 df.columns[:0:-1]
 plt.legend(df.columns[1:])
 
+# todo bar/hist plots; page 161
+df.iloc[:, 1:].values
 
-# todo bar/hist plots
+plt.bar(df.iloc[:, 0], df.iloc[:, 1])
+plt.bar(df.iloc[:, 0], df.iloc[:, 2])
+(plt.bar(df.iloc[:, 0], df.iloc[:, 3]))[6].set_color('r')
+
+
+plt.bar(df.iloc[:, 0], df.iloc[:, 1], label=1958)
+plt.plot(df.iloc[:, 3], 'b--', label=1960)
+plt.legend()
+
+
+# iterators
+class IncrementIter:
+    def __init__(self, n: int):
+        self.n = n
+        self.i = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.n <= self.i:
+            raise StopIteration
+        else:
+            self.i += 1
+            return self.i
+
+
+it1 = IncrementIter(5)
+for i in IncrementIter(4):
+    print(i)
+
+next(it1)
+
+# Generator jest funkcją która może zostać wstrzymana i wznowiona od miejsca,
+# w którym została. Generatory cechują się leniwą ewaluacją. [yield]
+
+# Iterator to obiekt pozwalający na sekwencyjny dostęp do kolejnych elementów.
+# Aby stworzyć iterator w klasie zaimplementować dwie funkcje:
+# `__iter__()` i `__next__()`
