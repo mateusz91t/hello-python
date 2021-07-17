@@ -1,13 +1,16 @@
+import sys
 import time
 import threading
 
 
-def czek(tekst):
-    print(f'start wątku {tekst}')
-    time.sleep(3)
-    print(f'koniec wątku {tekst}')
+def slowly(name: str):
+    print(f'{name} thread started')
+    time.sleep(1)
+    print(f'{name} thread stopped')
 
 
-x = threading.Thread(target=czek, args=('thread!!!!',))
+x = threading.Thread(target=slowly, args=('second',))
 x.start()
-czek('MAIN!!!')
+slowly('main')
+
+print(sys.version)

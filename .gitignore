@@ -1,8 +1,16 @@
 .idea/
 venv/
-csv_learn/.vscode/
+csv_learn/
+vscode/
 .pytest_cache/
 .coverage
 htmlcov/
 __pycache__/
 .vscode
+Scripts/
+site-packages/
+pyvenv.cfg
+Lib/
+Include/
+venv_cpython/
+/x_data.py

@@ -1,5 +1,5 @@
 import time
-import concurrent.futures
+import concurrent.futures as cf
 
 
 def oddaj():
@@ -7,7 +7,7 @@ def oddaj():
     return 'koza'
 
 
-wykonawca = concurrent.futures.ThreadPoolExecutor()
+wykonawca = cf.ThreadPoolExecutor()
 zadanie = wykonawca.submit(oddaj)
 zwrot = zadanie.result()
 print(zwrot)
