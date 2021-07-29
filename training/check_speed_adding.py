@@ -2,9 +2,13 @@ import time
 
 start = time.time()
 
-n = 0
 
-for i in range(1000000):
-    n += i
+def do_something():
+    n = 0
+    for i in range(10_000_000):
+        n += i
 
-print((time.time() - start) * 1000)
+
+do_something()
+
+print((time.time() - start))
