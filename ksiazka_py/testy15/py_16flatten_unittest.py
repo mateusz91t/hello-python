@@ -22,3 +22,6 @@ class TestsFlatten(unittest.TestCase):
         test_list = [[1, 2, [3, 4, 5], [6], 7, 8], 9]
         result = flatten(test_list)
         assert result == [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+if __name__ == '__main__':
+    unittest.main()

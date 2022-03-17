@@ -1,5 +1,5 @@
-from ksiazka_py.testy15.py_15flatten import flatten
 import pytest
+from ksiazka_py.testy15.py_15flatten import flatten
 
 
 @pytest.mark.parametrize(
