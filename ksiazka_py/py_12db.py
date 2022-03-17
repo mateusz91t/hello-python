@@ -1,8 +1,10 @@
+import imp
 import psycopg2
+from x_data import postgre_sql_pass
 
 # połączenie i select
 polaczenie = psycopg2.connect(
-    host='localhost', database='postgres', user='postgres', password='waga'
+    host='localhost', database='postgres', user='postgres', password=postgre_sql_pass
 )
 print('polaczenie', polaczenie)
 print(type(polaczenie))
@@ -15,7 +17,7 @@ for wiersz in kursor:
 
 # insert
 # returning numer - zwraca to co DB generuje automatycznie w kolumnie numer
-kursor.execute("insert into owoce (nazwa) values ('granat') returning numer")
+kursor.execute("insert into owoce (nazwa) values ('mandarynka') returning numer")
 kf1 = kursor.fetchone()  # fetch wykorzystuje zapisane w kursorze
 print('kursor.fetchone()', kf1)
 print(type(kf1))

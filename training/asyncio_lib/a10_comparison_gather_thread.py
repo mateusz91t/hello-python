@@ -70,8 +70,11 @@ main3()
 # threading.Thread:       Received 4 in 4.695679426193237
 
 # asyncio gets less resources than threading.
-# Coroutines from asyncio are fragments of an app.
+# Coroutines from asyncio are fragments of an app. 
+# In aio all asynchronous tasks run in 1 coroutine that runs in only 1 thread that runs in only 1 process.
 # Threads from threading make calls to OS kernel to make new Thread.
 
 # maybe if we waste CPU time during we wait for something better is asyncio
 # but if we want more power we should use Thread?
+
+# concurrency (asyncio, threading) > parallelism (multiprocessing)

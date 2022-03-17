@@ -73,7 +73,7 @@ Zadanie rekrutacyjne 5:
 (25pkt) Jakiego typu ładunek o największej wartości eksportują Niemieckie firmy z Niemczech? (wartość to stosunek ceny do wagi)
 """
 
-with open('../files_sources/dane.csv') as file:
+with open('./files_sources/dane.csv') as file:
     whole_file = file.read()
     file.seek(0)
     ships = file.readline()

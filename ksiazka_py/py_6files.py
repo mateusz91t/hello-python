@@ -3,8 +3,9 @@ from os.path import getsize
 from typing import TextIO
 
 print(getpreferredencoding())  # cp1250
-sciezka = '../files_sources/dane.txt'
+sciezka = 'files_sources/dane.txt'
 print(getsize(sciezka))  # 59 bajtów
+print(sciezka.__sizeof__())  # 59 bajtów
 
 
 plik = open(sciezka)
@@ -33,7 +34,7 @@ plik4.close()
 
 # mode = 'a' i 'w' tworzą plik jeśli go nie ma
 # 'r+' czyta i nadpisuje, ale nie tworzy
-sciezka2: str = '../files_sources/nowy.txt'
+sciezka2: str = 'files_sources/nowy.txt'
 plik5: TextIO = open(sciezka2, mode='r+')
 plik5.write('haHAHAho\n')
 plik5.close()

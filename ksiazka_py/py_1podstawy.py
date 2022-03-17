@@ -56,14 +56,14 @@ l2 = ['234', 'a', 456, True, l1]
 print(l2)
 print('teksttekst' in l2)
 print('teksttekst' in l1)
-if 1 in l2:
+if (1 in l2) & (True in l2):
     print('why?')
 
 print(l1.append('X'))  # None
 print(l1)
 l2.insert(1, 'B')
 print(l2)
-print(l2.remove('a'))
+print(l2.remove('a'))  # None
 print(l2)
 l1.clear()
 print(l2)
@@ -90,6 +90,7 @@ l5 = [*range(2, 20, 3)]
 print(l5)
 print(sum(l5), max(l5), min(l5))
 print(l5.index(17))
+# print(l5.index(18))  # ValueError
 
 # map & filter
 print('\nmap & filter')
@@ -135,8 +136,9 @@ z1.remove(10)
 z3 = {1, 2, 3, 4}
 z4 = {3, 4, 5, 6, }
 
-print(z3.union(z4))
 print(z3)
+print(z4)
+print(z3.union(z4))
 z3.update(z4)
 print(z3)
 
