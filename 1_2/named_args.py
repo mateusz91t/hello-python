@@ -2,7 +2,7 @@ def foo1(a: int = 1, b: int = 2, **kwargs: int):
     print(f'{type(a)}\ta = {a}')
     print(f'{type(b)}\tb = {b}')
     print(f'{type(kwargs)}\tkwargs = {kwargs}')
-    print(f'{type(kwargs.keys())}\tkwargs.values() = {kwargs.keys()}')
+    print(f'{type(kwargs.keys())}\tkwargs.keys() = {kwargs.keys()}')
     print(f'{type(kwargs.values())}\tkwargs.values() = {kwargs.values()}')
     return a + b + sum(kwargs.values())
 
@@ -14,7 +14,7 @@ def foo2(a: int = 1, b: int = 2, *c: int):
     return a + b + sum(c)
 
 
-def foo3(*, a: int = 1, b: int = 3, **kwargs: int):  # * - U have to get named args only
+def foo3(*, a: int, b: int = 3, **kwargs: int):  # * - U have to get named args only
     print(f'{type(a)}\ta = {a}')
     print(f'{type(b)}\tb = {b}')
     print(f'{type(kwargs)}\tkwargs = {kwargs}')

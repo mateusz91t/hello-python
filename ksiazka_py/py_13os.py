@@ -1,6 +1,6 @@
 import os
 
-folder_wyjsciowy = 'D:/Mateusz/nauka/front'
+folder_wyjsciowy = 'D:/Mateusz/zdjecia'
 
 for p in os.walk(folder_wyjsciowy):
     print(p)
@@ -39,7 +39,7 @@ print(os.path.exists(folder_wyjsciowy))
 print(os.path.exists(folder_wyjsciowy + 'asd'))
 print(os.path.isdir(folder_wyjsciowy))
 print(os.path.isfile(folder_wyjsciowy))
-print(os.path.getsize('D:/Mateusz/nauka/front/html/1/img/p1.png'), 'bajtów')
+print(os.path.getsize('D:/Mateusz/zdjecia/inne/zakupy/ram/r1.jpg'), 'bajtów')
 
 print('\n\n\n')
 

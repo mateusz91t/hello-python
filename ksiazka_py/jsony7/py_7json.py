@@ -1,9 +1,10 @@
 import json
 
 
-sciezka1 = '../../files_sources/dane.json'
+sciezka1 = 'files_sources/dane.json'
 plik1 = open(sciezka1, encoding='utf8')
 json1 = json.load(plik1)
+plik1.close()
 
 print(type(json1))
 print(json1)

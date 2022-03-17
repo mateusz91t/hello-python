@@ -1,4 +1,4 @@
-jeśli tworzymy osobny folder z plikami to trzeba zrobić z niego pakiet.
+jeśli tworzymy osobny folder z testami to trzeba zrobić z niego pakiet.
 Pakiet tworzymy dodając w folerze pusty plik __init__.py
 
 pytest:
@@ -9,7 +9,7 @@ i metodach w tych plikach zaczynających się od test*
 python -m pytest -v
 to samo ale wyświeli konkretne testy
 
-python -m pytest -v ksiazka_py/testy19
+python -m pytest -v ksiazka_py/testy15
 uruchomi testy tylko z tego katalogu i podrzędnych
 
 python -m pytest -k daj -v
@@ -27,13 +27,15 @@ można to zrobić dodając plik pyproject.toml, a w opis nowych marks formacie z
 python -m pytest ksiazka_py/testy15/testy21fixtury -v -s
 -s powoduje wyświetlenie out z konsoli print()
 
-def setup_module(): ... oraz def teardown_module():
+def setup_module(): ... oraz def 
+():
 uruchomi się na początku i na końcu pliku testów
 
 fixtura - metoda, która przygotowuje dane lub wykonuje czynności inicjalizacyjne na potrzeby testów
 
 @pytest.fixture
-dodanie tego dekoratora nad naszą customową metodę i wpisanie nazwy dekorowanej metody jako parametru w definicji wybranych testów spowoduje uruchomienie tej
+dodanie tego dekoratora nad naszą customową metodę i wpisanie nazwy dekorowanej metody,
+jako parametru w definicji wybranych testów spowoduje uruchomienie tej
 metody przed uruchomieniem każdego z tych testów
 
 @pytest.fixture(scope='module')
@@ -41,7 +43,8 @@ dekorator nad naszą customową metodą spowoduje uruchomienie tej f.
 jeden raz przed uruchomieniem testów z nazwą tej f. w definicji parametrów
 
 @pytest.fixture(autouse=True)
-# autouse zadziała tak tak setup_module - nie trzeba podawać nazwy funkcji w parametrach testów można mieszać ze scope='module', w tedy uruchomi się 1 raz dla całego modułu
+# autouse zadziała tak tak setup_module - nie trzeba podawać nazwy funkcji w parametrach testów,
+można mieszać ze scope='module', w tedy uruchomi się 1 raz dla całego modułu
 
 python -m pytest --cov
 sprawdzi cały projekt pod względem pokrycia kodu testami
@@ -53,4 +56,12 @@ python -m pytest ksiazka_py/testy15/testy20param/ --cov --cov-report=html
 sprawdzić tylko wskazany folder, a wynik wrzuci to katalogu projektu do folderu htmlcov
 
 pytest -W ignore::DeprecationWarning -s
-pozwala wyświetlać printy podczas testów
+-W ignore::... nie pokazuje tego rodzaju warningów
+
+
+
+fajne libki pomagające ogarniać kod:
+    Flake8: Sprawdza poprawność pisowni ze standardem PEP8 i innymi standardowymi guidelineami.
+    mypy: Analizuje typy danych w kodzie nie uruchamiając go. Potrafi wykryć potencjalne błędy.
+    isort: Sprawdza poprawność sortowania importów z modułów w naszym kodzie
+    black: Automatyczny linter który w jednoznaczy sposób wyznacza sposób pisowni, deterministyczny i bardzo przydatny w pracy zespołowej.

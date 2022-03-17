@@ -1,5 +1,5 @@
-from paczka import add, sayno
-import paczka2 as p2
+from ksiazka_py.moduly5.paczka1.paczka import add, sayno
+import ksiazka_py.moduly5.paczka1.paczka2 as p2
 
 
 p2.hello()

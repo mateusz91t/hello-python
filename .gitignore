@@ -14,3 +14,5 @@ Lib/
 Include/
 venv_cpython/
 /x_data.py
+/files_sources/flying-vehicles/
+/files_sources/flying-vehicles.zip

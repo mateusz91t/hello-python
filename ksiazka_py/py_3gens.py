@@ -70,6 +70,6 @@ def wczytajduzyplik(sciezka: str, separator: str = ''):
                 break
 
 
-f1 = wczytajduzyplik('../files_sources/dane.csv', ';')
+f1 = wczytajduzyplik('files_sources/dane.csv', ';')
 print(next(f1))
 print(type(f1))
