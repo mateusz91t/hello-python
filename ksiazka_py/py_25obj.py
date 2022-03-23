@@ -5,10 +5,10 @@ class Owoc:
         self.kolor = kolor
 
     def zjedz(self, ile):
-        print('zjedz cały {}'.format(ile))
+        print('{} zjedz cały {}'.format(self, ile))
 
     def zjedz(self):  # jeśli ta f będzie pierwsza zadeklarowana to się wysypie
-        print('zjedz cały')
+        print('%s zjedz cały'%(self))
 
     @staticmethod
     def statyczna():
@@ -24,5 +24,5 @@ o1.zjedz()
 # o1.zjedz(ile=2)  # to nie zadziała, bo metoda z 'ile' została przesłonięta, a nie przeciążona
 
 o1.statyczna()
-Owoc.statyczna()
+Owoc.statyczna|()
 # Owoc.zjedz()  # wysypie się bo jest self w def, którego klasa nie ma

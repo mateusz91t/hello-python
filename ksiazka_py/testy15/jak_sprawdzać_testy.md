@@ -15,7 +15,7 @@ Uruchomi testy tylko z tego katalogu i podrzędnych.
 Uruchomi konkretny plik, mimo że nie zaczyna się od test*.
 
 `pytest -v .\ksiazka_py\testy15\py_17flatten_pytest.py` 
-Jeśli w folerze testy15 jest `__init__.py`
+Jeśli w folerze testy15 jest `__init__.py`, a plik testów nie zaczyna się od test*,
 to pytest się wywali w porównaniu do python -m pytest.
 
 `python -m pytest -k daj -v`
